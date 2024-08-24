@@ -1,0 +1,12 @@
+# Ignore configuration files
+db.php
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+temp/
+cache/
+
+# Ignore all files in specific directories
+/secret/
