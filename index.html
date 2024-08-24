@@ -13,16 +13,18 @@
     <form id="add-entry-form">
         <label for="type">Type:</label>
         <select id="type" name="type">
-            <option value="income" selected>Income</option>
-            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+            <option value="expense" selected>Expense</option>
         </select>
 
         <label for="description">Description:</label>
         <input type="text" id="description" name="description" required>
 
         <label for="amount-dollars">Amount:</label>
+
         <input type="number" id="amount-dollars" name="amount-dollars" min="0" step="1" required>
         <span> dollars </span>
+
         <input type="number" id="amount-cents" name="amount-cents" min="0" max="99" step="1" required>
         <span> cents </span>
 

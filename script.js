@@ -45,11 +45,38 @@ function displayEntries(entries) {
     const entriesContainer = document.getElementById('entries');
     entriesContainer.innerHTML = '';  // Clear existing entries
 
+    if (entries.length === 0) {
+        entriesContainer.innerHTML = '<p>No entries found.</p>';
+        return;
+    }
+
+    // Create the table
+    const table = document.createElement('table');
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Payer</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    `;
+
+    const tbody = table.querySelector('tbody');
+
     entries.forEach(entry => {
-        const entryElement = document.createElement('div');
-        entryElement.textContent = `ID: ${entry.id} - Description: ${entry.description} - Amount: $${parseFloat(entry.amount).toFixed(2)} - Date: ${entry.date} - Payer: ${entry.payer}`;
-        entriesContainer.appendChild(entryElement);
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${entry.description}</td>
+            <td>$${parseFloat(entry.amount).toFixed(2)}</td>
+            <td>${entry.payer.charAt(0).toUpperCase() + entry.payer.slice(1)}</td>
+        `;
+        tbody.appendChild(row);
     });
+
+    entriesContainer.appendChild(table);
 }
 
 function calculateTotals(entries) {
