@@ -2,6 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mainColumn
+{
+  width: 500px;
 }
 
 h1, h2 {
@@ -24,6 +31,11 @@ button {
     margin-bottom: 10px;
 }
 
+input[type="number"]
+{
+  width: 50px;
+}
+
 button {
     background-color: #4CAF50;
     color: white;
@@ -42,4 +54,18 @@ button:hover {
 
 #daily-totals, #monthly-totals {
     margin: 10px 0;
+}
+
+.inputRow
+{
+
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding: 6px;
+  max-width: 100%;
+  position: relative;
+  /* flex-direction: column; */
+  column: 19px;
+  flex-wrap: wrap;
 }
