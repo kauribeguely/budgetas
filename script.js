@@ -7,17 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
         // Convert dollars and cents into a single amount
-        const amountDollars = parseFloat(data['amount-dollars']) || 0;
-        const amountCents = parseFloat(data['amount-cents']) || 0;
-        const totalAmount = (amountDollars + amountCents / 100).toFixed(2);
-
-        // Add totalAmount to data
-        data.amount = totalAmount;
+        // const amountDollars = parseFloat(data['amount-dollars']) || 0;
+        // const amountCents = parseFloat(data['amount-cents']) || 0;
+        // const totalAmount = (amountDollars + amountCents / 100).toFixed(2);
+        //
+        // // Add totalAmount to data
+        // data.amount = totalAmount;
 
         // Remove the separate dollar and cent fields from the data object
-        delete data['amount-dollars'];
-        delete data['amount-cents'];
+        // delete data['amount-dollars'];
+        // delete data['amount-cents'];
 
+        // console.log(data.toString());
         try {
             await fetch('add_entry.php', {
                 method: 'POST',

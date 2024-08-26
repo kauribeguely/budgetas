@@ -13,23 +13,27 @@
       <h2>Add New Entry</h2>
       <form id="add-entry-form">
           <label for="type">Type:</label>
-          <select id="type" name="type">
-              <option value="income">Income</option>
-              <option value="expense" selected>Expense</option>
-          </select>
 
           <label for="description">Description:</label>
           <input type="text" id="description" name="description" required>
 
           <label for="amount-dollars">Amount:</label>
 
-          <div class='inputRow'>
+          <input type="number" id="amount" name="amount" min="0" step="0.5" required>
+
+
+          <!-- <div class='inputRow'>
             <span> $ </span>
             <input type="number" id="amount-dollars" name="amount-dollars" min="0" step="1" required>
             <span> . </span>
             <input type="number" id="amount-cents" name="amount-cents" min="0" max="99" step="1" required>
             <span> ¢ </span>
-          </div>
+          </div> -->
+
+          <select id="type" name="type">
+              <option value="income">Income</option>
+              <option value="expense" selected>Expense</option>
+          </select>
 
           <label for="category">Category:</label>
           <input type="text" id="category" name="category">
