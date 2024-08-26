@@ -8,20 +8,23 @@
 </head>
 <body>
     <div class='.mainColumn'>
-      <h1>Expense Tracker</h1>
+      <!-- <h1>Expense Tracker</h1> -->
 
       <h2>Add New Entry</h2>
       <form id="add-entry-form">
-          <label for="type">Type:</label>
+
+          <label for="amount-dollars">Amount:</label>
+          <input type="number" id="amount" name="amount" min="0" step="0.5" required>
 
           <label for="description">Description:</label>
           <input type="text" id="description" name="description" required>
 
-          <label for="amount-dollars">Amount:</label>
-
-          <input type="number" id="amount" name="amount" min="0" step="0.5" required>
-
-
+          <label for="payer">Payer:</label>
+          <select id="payer" name="payer">
+            <option value="shared" selected>Shared</option>
+            <option value="john">John</option>
+            <option value="jane">Jane</option>
+          </select>
           <!-- <div class='inputRow'>
             <span> $ </span>
             <input type="number" id="amount-dollars" name="amount-dollars" min="0" step="1" required>
@@ -30,6 +33,7 @@
             <span> ¢ </span>
           </div> -->
 
+          <label for="type">Type:</label>
           <select id="type" name="type">
               <option value="income">Income</option>
               <option value="expense" selected>Expense</option>
@@ -38,12 +42,6 @@
           <label for="category">Category:</label>
           <input type="text" id="category" name="category">
 
-          <label for="payer">Payer:</label>
-          <select id="payer" name="payer">
-              <option value="shared" selected>Shared</option>
-              <option value="john">John</option>
-              <option value="jane">Jane</option>
-          </select>
 
           <button type="submit">Add Entry</button>
       </form>

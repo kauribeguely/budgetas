@@ -69,3 +69,16 @@ button:hover {
   column: 19px;
   flex-wrap: wrap;
 }
+
+#amount, #description
+{
+  width: 92%;
+  border-radius: 30px;
+  font-size: 21px;
+  padding: 10px;
+  text-align: center;
+}
+
+input#description {
+    height: 66px;
+}
