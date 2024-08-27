@@ -42,6 +42,11 @@ button {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
+    margin-top: 33px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 21px;
+    padding: 10px;
 }
 
 button:hover {
