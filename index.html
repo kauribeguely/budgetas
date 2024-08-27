@@ -19,12 +19,16 @@
           <label for="description">Description:</label>
           <input type="text" id="description" name="description" required>
 
-          <label for="payer">Payer:</label>
-          <select id="payer" name="payer">
-            <option value="shared" selected>Shared</option>
-            <option value="john">John</option>
-            <option value="jane">Jane</option>
-          </select>
+            <div id="payer" name="payer">
+              <input type="radio" id="payer-shared" name="payer" value="shared" checked>
+              <label for="payer-shared" class="payer-button">&#128107;</label>
+
+              <input type="radio" id="payer-capretto" name="payer" value="capretto">
+              <label for="payer-capretto" class="payer-button">&#128104;</label>
+
+              <input type="radio" id="payer-bella" name="payer" value="bella">
+              <label for="payer-bella" class="payer-button">&#128105;</label>
+            </div>
           <!-- <div class='inputRow'>
             <span> $ </span>
             <input type="number" id="amount-dollars" name="amount-dollars" min="0" step="1" required>

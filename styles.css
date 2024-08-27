@@ -56,13 +56,13 @@ button:hover {
     margin: 10px 0;
 }
 
-.inputRow
+.inputRow, #payer
 {
 
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-between;
   align-items: center;
-  padding: 6px;
+  /* padding: 6px; */
   max-width: 100%;
   position: relative;
   /* flex-direction: column; */
@@ -81,4 +81,32 @@ button:hover {
 
 input#description {
     height: 66px;
+}
+
+/* Hide the actual radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style the labels to look like radio buttons */
+.payer-button {
+  border: 2px solid #ccc;
+  padding: 10px;
+  /* margin-right: 5px; */
+  cursor: pointer;
+  display: inline-block;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  /* line-height: 1.5; */
+  box-shadow: 3px 3px 10px #00000036;
+}
+
+/* Style for selected radio button */
+input[type="radio"]:checked + .payer-button {
+  /*background-color: #007bff; */
+  color: white;
+  /* border-color: #007bff; */
+  box-shadow: inset 3px 3px 5px #00000036;
 }
