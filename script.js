@@ -67,7 +67,22 @@ function displayEntries(entries) {
 
     const tbody = table.querySelector('tbody');
 
+    let lastDate = '';
+
     entries.forEach(entry => {
+        const currentDate = new Date(entry.date).toLocaleDateString();
+
+        if (currentDate !== lastDate) {
+            // Create a new row for the date
+            const dateRow = document.createElement('tr');
+            dateRow.innerHTML = `
+                <td colspan="3" style="font-weight: bold; padding-top: 10px;">${currentDate}</td>
+            `;
+            tbody.appendChild(dateRow);
+            lastDate = currentDate; // Update lastDate to current date
+        }
+
+        // Create a row for the entry
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${entry.description}</td>
