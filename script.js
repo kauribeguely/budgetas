@@ -144,7 +144,7 @@ function showPage(pageName)
   {
     document.querySelector('#viewScreen').style.display = 'none';
     document.querySelector('#addScreen').style.display = 'block';
-
+    document.querySelector('#amount').focus();
   }
 
 }
