@@ -47,6 +47,7 @@ button {
     border-radius: 30px;
     font-size: 21px;
     padding: 10px;
+    box-shadow: 3px 3px 6px #00000036;
 }
 
 button:hover {
@@ -96,7 +97,7 @@ input[type="radio"] {
 }
 
 /* Style the labels to look like radio buttons */
-.payer-button {
+.payer-button, .menuButton {
   border: 2px solid #ccc;
   padding: 10px;
   /* margin-right: 5px; */

@@ -132,3 +132,19 @@ function displayTotals(dailyTotals, monthlyTotals) {
         monthlyTotalsContainer.innerHTML += `Month: ${month} - Total: $${total.toFixed(2)}<br>`;
     }
 }
+
+function showPage(pageName)
+{
+  if(pageName == "home")
+  {
+    document.querySelector('#addScreen').style.display = 'none';
+    document.querySelector('#viewScreen').style.display = 'block';
+  }
+  else if(pageName == "add")
+  {
+    document.querySelector('#viewScreen').style.display = 'none';
+    document.querySelector('#addScreen').style.display = 'block';
+
+  }
+
+}
