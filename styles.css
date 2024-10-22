@@ -8,11 +8,12 @@ body {
 
 .mainColumn
 {
-  width: 600px;
+  width: 350px;
 }
 
 h1, h2 {
     color: #333;
+    /* width: 100%; */
 }
 
 form {
